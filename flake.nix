@@ -18,21 +18,21 @@
     system = "x86_64-linux";
 
     # User Variables
-    hostname = "hyprnix";
-    username = "zaney";
-    gitUsername = "Tyler Kelley";
-    gitEmail = "tylerzanekelley@gmail.com";
+    hostname = "ethan-nixos";
+    username = "ethan";
+    gitUsername = "ethansmitty";
+    gitEmail = "ethansmitty@gmail.com";
     theLocale = "en_US.UTF-8";
     theKBDLayout = "us";
     theLCVariables = "en_US.UTF-8";
-    theTimezone = "America/Chicago";
-    theme = "gigavolt";
+    theTimezone = "America/New_York";
+    theme = "cupcake";
     waybarStyle = "style2"; # can be style1-2
     borderAnim = "on"; # anything other than on disables anim borders in Hyprland
     browser = "firefox";
     wallpaperGit = "https://gitlab.com/Zaney/my-wallpapers.git";
     wallpaperDir = "/home/${username}/Pictures/Wallpapers";
-    flakeDir = "/home/${username}/zaneyos";
+    flakeDir = "/home/${username}/es-nixos-flake";
     # Driver selection profile
     # Options include amd (tested), intel, nvidia
     # GPU hybrid options: intel-nvidia, intel-amd
@@ -53,6 +53,7 @@
     };
   in {
     nixosConfigurations = {
+      home.sessionVariables.XDG_RUNTIME_DIR = "/run/user/$UID";
       "${hostname}" = nixpkgs.lib.nixosSystem {
 	    specialArgs = { 
           inherit system; inherit inputs; 

@@ -11,13 +11,56 @@ in {
 
   # List System Programs
   environment.systemPackages = with pkgs; [
-    wget curl git cmatrix lolcat neofetch htop btop libvirt
-    polkit_gnome lm_sensors unzip unrar libnotify eza
-    v4l-utils ydotool wl-clipboard socat cowsay lsd lshw
-    pkg-config meson hugo gnumake ninja go nodejs symbola
-    noto-fonts-color-emoji material-icons brightnessctl
-    toybox virt-viewer jetbrains.pycharm-community-bin
-    (pkgs.python3.withPackages my-python-packages)
+        _1password-gui
+        brightnessctl
+        btop
+        curl
+        cmatrix
+        cowsay
+        dunst
+        eza
+        font-awesome
+        git
+        gnumake
+        go
+        htop
+        hugo
+        hyprpaper
+        kitty
+        libsForQt5.sddm
+        libnotify
+        #libvirt
+        lm_sensors
+        lolcat
+        lsd
+        lshw
+        material-icons
+        meson
+        nano
+        neofetch
+        neovim
+        ninja
+        noto-fonts-color-emoji
+        pavucontrol
+        pipewire
+        pkg-config
+        polkit_gnome
+        rofi-wayland
+        socat
+        toybox
+        unrar
+        unzip
+        v4l-utils
+        vim
+        virt-viewer
+        waybar
+        wget
+        wireplumber
+        wl-clipboard
+        xdg-desktop-portal-hyprland
+        ydotool
+
+        (pkgs.python3.withPackages my-python-packages)
   ];
 
   programs.steam.gamescopeSession.enable = true;
